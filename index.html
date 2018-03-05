@@ -3,8 +3,118 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Pacifico" rel="stylesheet" type='text/css'>
+    <style>
+      body{
+        background: green;
+      }
+      
+      button{
+        background: orange;
+        border-radius: 100px;
+      }
+      div{
+          
+          height:600px;
+          border: 8px solid green;
+          border-style: double;
+          
+          
+      }
+      h1{
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        font-weight: 1000;
+        font-size: 70px;
+        
+      }
+      h2{
+        text-align:center;
+      }
+      p{
+        font-weight: bold;
+        font-size: 20px;
+      }
+      h5{
+        font-size:30px
+      }
+      h6{
+        font-size:15px;
+      }
+      h8{
+        font-size:20px;
+        font-family: 'Pacifico', cursive;
+      }
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ 
+
+    <script>
+        $(function(){
+            $('button').click(function(){
+              $(this).css('background', 'rgba(250, 60, 10, .6)')
+              var color1=$('#color1').val()
+              var color2=$('#color2').val()
+              $('div').css('background-color',color1).css('border-color', 'red').css('color', color2)
+             
+            var email=$('#email').val()
+            var name=$('#name').val()
+            var name1=$('#name1').val()
+            var name2=$('#name2').val()
+            var age=$('#age').val()
+            var major=$('#major').val()
+            var hobby=$('#hobby').val()
+            var scholar=(" Because of your excellence in " +hobby + " we guarantee you a half scholarship!")
+            var number = $('#number').val()
+            var price=("The final price for your college tuition is $" + ((number/2)*10000)+"!")
+            var college=$("input[type='radio'][name='animal']:checked").val()
+            var acceptance=( "Dear " + name +" you have got accepted to " )
+            var par =(" Hello " + "<font color= red>"+ name +"</font>" +", we are glad to accept you to to " + college  + ", you would like you to major in " + major + " in our campus.")
+            var message=("We will email more details to you about " + college + ", on your email " + email) +"."
+            $('h1').html(college)
+            $('h3').html(acceptance)
+            $('p').html(par)
+            $('h4').html(scholar)
+            $('h5').html(price)
+            $('h6').html(message)
+            $('h7').html("Sincerely")
+            $('h8').html(name1 + " " + name2)
+            
+        })
+        });
+        
+    </script>
   </head>
   <body>
+    
+    <h2>College Info Card</h2>
+    Name: <input id="name"><br>
+    Age: <input id="age"><br>
+    First Favorite Color: <input id="color1"><br>
+    Second Favorite Color: <input id="color2"><br>
+    Favorite Number: <input id="number"><br>
+    What do you wanna major in college? <input id ="major"><br>
+    Do you prefer:  <input id='college' type = "radio" name = "animal" value = "ducks University"> Ducks <input id='college' type = "radio" name = "animal" value = "Puppies University"> puppies<br>
+    What's your favorite hobby: <input id="hobby"><br>
+    Email:<input id="email"><br>
+    Give me a first name: <input id='name1'><br>
+    Now give me a last name: <input id='name2'><br>
+    
+  <button>Generate college!</button>
+  <div>
+      <h3></h3>
+  <h1></h1>
+  <p></p>
+  <h4></h4>
+   <h5></h5>
+    <h6></h6>
+    <h7></h7>
+    <br>
+    <h8></h8>
+  </div>
+  
+  
   
   </body>
 </html>
